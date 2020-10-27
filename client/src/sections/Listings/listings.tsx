@@ -1,6 +1,6 @@
 import React from 'react';
 import { server } from '../../lib/api';
-import { ListingsData } from './types';
+import { DeleteListingData, DeleteListingVariables, ListingsData } from './types';
 
 const LISTINGS = `
   query Listings {
@@ -28,10 +28,19 @@ export const Listings = ({ title }: Props) => {
     console.log(data); 
   };
 
+  const deleteListings = async () => {
+
+  }
+
   return (
     <div>
       <h2>{title}</h2>
-      <button onClick={fetchListings}>Query Listings!</button>
+      <button onClick={fetchListings}>
+        Query Listings!
+      </button>
+      <button onClick={deleteListings}>
+        Delete a Listings!
+      </button>
     </div>
   );
 };
